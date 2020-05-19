@@ -1,0 +1,132 @@
+{
+  "attributes": {
+    "comment": {
+      "description": "Free text value to attach to the file",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "recommended": false,
+      "ui-priority": 1
+    },
+    "domain": {
+      "description": "The command and control server domain that file connected",
+      "misp-attribute": "domain",
+      "multiple": true,
+      "ui-priority": 1
+    },
+    "filename": {
+      "categories": [
+        "Payload delivery",
+        "Artifacts dropped",
+        "Payload installation",
+        "External analysis"
+      ],
+      "description": "Filename on disk",
+      "disable_correlation": true,
+      "misp-attribute": "filename",
+      "multiple": true,
+      "ui-priority": 1
+    },
+    "ip": {
+      "description": "The command and control server IP that file connected",
+      "misp-attribute": "ip-dst",
+      "multiple": true,
+      "ui-priority": 1
+    },
+    "md5": {
+      "description": "[Insecure] MD5 hash (128 bits)",
+      "misp-attribute": "md5",
+      "recommended": false,
+      "ui-priority": 1
+    },
+    "mimetype": {
+      "description": "Mime type",
+      "disable_correlation": true,
+      "misp-attribute": "mime-type",
+      "ui-priority": 0
+    },
+    "path": {
+      "description": "Path of the filename complete or partial",
+      "disable_correlation": true,
+      "misp-attribute": "text",
+      "multiple": true,
+      "ui-priority": 0
+    },
+    "pattern-in-file": {
+      "categories": [
+        "Artifacts dropped",
+        "Payload installation",
+        "External analysis"
+      ],
+      "description": "Pattern that can be found in the file",
+      "misp-attribute": "pattern-in-file",
+      "multiple": true,
+      "ui-priority": 1
+    },
+    "sha1": {
+      "description": "[Insecure] Secure Hash Algorithm 1 (160 bits)",
+      "misp-attribute": "sha1",
+      "recommended": false,
+      "ui-priority": 1
+    },
+    "sha224": {
+      "description": "Secure Hash Algorithm 2 (224 bits)",
+      "misp-attribute": "sha224",
+      "recommended": false,
+      "ui-priority": 0
+    },
+    "sha256": {
+      "description": "Secure Hash Algorithm 2 (256 bits)",
+      "misp-attribute": "sha256",
+      "ui-priority": 1
+    },
+    "sha384": {
+      "description": "Secure Hash Algorithm 2 (384 bits)",
+      "misp-attribute": "sha384",
+      "recommended": false,
+      "ui-priority": 0
+    },
+    "sha512": {
+      "description": "Secure Hash Algorithm 2 (512 bits)",
+      "misp-attribute": "sha512",
+      "ui-priority": 1
+    },
+    "sha512/224": {
+      "description": "Secure Hash Algorithm 2 (224 bits)",
+      "misp-attribute": "sha512/224",
+      "recommended": false,
+      "ui-priority": 0
+    },
+    "sha512/256": {
+      "description": "Secure Hash Algorithm 2 (256 bits)",
+      "misp-attribute": "sha512/256",
+      "recommended": false,
+      "ui-priority": 0
+    },
+    "size-in-bytes": {
+      "description": "Size of the file, in bytes",
+      "disable_correlation": true,
+      "misp-attribute": "size-in-bytes",
+      "ui-priority": 0
+    }
+  },
+  "description": "File object describing a file with meta-information and Command and Control information respectively.",
+  "meta-category": "file",
+  "name": "file-ioc",
+  "requiredOneOf": [
+    "domain",
+    "filename",
+    "ip",
+    "md5",
+    "path",
+    "pattern-in-file",
+    "sha1",
+    "sha224",
+    "sha256",
+    "sha384",
+    "sha512",
+    "sha512/224",
+    "sha512/256"
+  ],
+  "uuid": "e94f8d02-158e-4a69-bb43-9bb323fb7a5e",
+  "version": 1
+}
